@@ -13,8 +13,10 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
-    "empty": "^0.10.1",
     "noop-webpack-plugin": "^1.0.1"
+  },
+  "peerDependencies": {
+    "empty": "^0.10.1",
   },
   "optionalDependencies": {
     "fsevents": "^2.1.3"
