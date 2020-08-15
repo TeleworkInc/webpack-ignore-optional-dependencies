@@ -1,6 +1,6 @@
 {
   "name": "webpack-disable-packages",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "main": "./index.js",
   "repository": "https://github.com/TeleworkInc/webpack-disable-package.git",
   "author": "Christian Lewis <hello@trytelework.com>",
