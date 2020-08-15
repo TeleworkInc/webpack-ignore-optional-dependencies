@@ -1,8 +1,8 @@
 {
-  "name": "webpack-ignore-optional-dependencies",
-  "version": "1.1.0",
+  "name": "webpack-ignore-optional",
+  "version": "1.0.0",
   "main": "./index.js",
-  "repository": "https://github.com/TeleworkInc/webpack-ignore-optional-dependencies.git",
+  "repository": "https://github.com/TeleworkInc/webpack-ignore-optional.git",
   "author": "Christian Lewis <hello@trytelework.com>",
   "license": "MIT",
   "dependencies": {

@@ -1,0 +1,5 @@
+# Exclude all
+**/**
+
+# Except index.js
+!./index.js
