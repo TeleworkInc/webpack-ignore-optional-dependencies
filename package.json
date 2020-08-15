@@ -4,6 +4,12 @@
   "main": "./index.js",
   "repository": "https://github.com/TeleworkInc/webpack-ignore-optional.git",
   "author": "Christian Lewis <hello@trytelework.com>",
+  "keywords": [
+    "webpack",
+    "webpack-plugin",
+    "optional",
+    "dependencies"
+  ],
   "license": "MIT",
   "dependencies": {
     "@webpack-contrib/defaults": "^6.3.0",
