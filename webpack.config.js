@@ -6,7 +6,7 @@
  * A test webpack config.
  */
 const path = require('path');
-const ignoreOptional = require('.');
+const disablePackages = require('.');
 
 const MODULE_DEFAULTS = {
   rules: [
@@ -38,7 +38,9 @@ const CJS_CONFIG = {
     libraryTarget: 'commonjs',
   },
   plugins: [
-    ignoreOptional(),
+    disablePackages(
+        'fsevents',
+    ),
   ],
 };
 

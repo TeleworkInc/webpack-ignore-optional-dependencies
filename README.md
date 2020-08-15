@@ -1,18 +1,21 @@
 # Ignore optional dependencies
-Prevent issues with `fsevents` and other breaking, platform-specific
-`optionalDependencies` in `package.json` by including this plugin first in the
-plugins stack.
+Disable a package throughout your build process by pointing it to an empty
+module. This was designed for use with the `fsevents` package, which breaks
+builds for Webpack and Rollup alike.
 
-Only points module sources to the `empty` module if it is found in
-`package.json > optionalDependencies`.
+### Prerequisites
+Mandatory `empty` peer-dep is required:
+```bash
+yarn add -D empty
+```
 
 `webpack.config.js`
 ```javascript
-const ignoreOptional = require('webpack-ignore-optional');
+const disablePackages = require('webpack-disable-package');
 {
   ...
   plugins: [
-    ignoreOptional(),
+    disablePackages('fsevents'),
     ...
   ],
 }

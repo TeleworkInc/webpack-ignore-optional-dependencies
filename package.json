@@ -1,8 +1,8 @@
 {
-  "name": "webpack-ignore-optional",
+  "name": "webpack-disable-packages",
   "version": "1.6.0",
   "main": "./index.js",
-  "repository": "https://github.com/TeleworkInc/webpack-ignore-optional.git",
+  "repository": "https://github.com/TeleworkInc/webpack-disable-package.git",
   "author": "Christian Lewis <hello@trytelework.com>",
   "keywords": [
     "webpack",
@@ -17,9 +17,6 @@
   },
   "peerDependencies": {
     "empty": "^0.10.1"
-  },
-  "optionalDependencies": {
-    "fsevents": "^2.1.3"
   },
   "devDependencies": {
     "webpack": "^4.44.1",

@@ -15,40 +15,33 @@ const noop = require('noop-webpack-plugin');
 /**
  * Generate a regex matcher for the source replacement.
  *
- * @param {...string} optionalDependencies
- * The list of optional dependencies to generate a regex match from.
+ * @param {...string} packages
+ * The list of packages to generate a regex match for.
  *
  * @return {RegExp} matcher
  */
-const getDependencyRegex = (optionalDependencies = []) => {
-  return new RegExp(optionalDependencies.join('|'));
+const getDependencyRegex = (...packages) => {
+  return new RegExp(packages.join('|'));
 };
 
 /**
  * Generate the actual plugin to provide Webpack.
  *
+ * @param {...string} packages
+ * The packages to disable.
+ *
  * @return {webpack.NormalModuleReplacementPlugin}
  * The generated Module Replacement Plugin.
  */
-const ignoreOptionalDependencies = () => {
-  const packageObj = JSON.parse(
-      fs.readFileSync(
-          path.resolve(process.cwd(), 'package.json'),
-      ),
-  );
-
-  const optionalDependencies = Object.keys(
-      packageObj.optionalDependencies || {},
-  );
-
-  if (!optionalDependencies.length) {
+const disablePackages = (...packages) => {
+  if (!packages.length) {
     return noop();
   }
 
   return new webpack.NormalModuleReplacementPlugin(
-      getDependencyRegex(optionalDependencies),
+      getDependencyRegex(...packages),
       'empty',
   );
 };
 
-module.exports = ignoreOptionalDependencies;
+module.exports = disablePackages;
