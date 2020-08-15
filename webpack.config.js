@@ -30,6 +30,7 @@ const CJS_CONFIG = {
   },
   entry: {
     importRewrite: './lib/importRewrite.cjs',
+    importSquared: './lib/importSquared.cjs',
   },
   output: {
     path: path.resolve('build/'),

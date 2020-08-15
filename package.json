@@ -12,12 +12,11 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@webpack-contrib/defaults": "^6.3.0",
     "chalk": "^4.1.0",
-    "empty": "^0.10.1"
+    "empty": "^0.10.1",
+    "noop-webpack-plugin": "^1.0.1"
   },
   "optionalDependencies": {
-    "an-optional-dependency": "^0.0.1",
     "fsevents": "^2.1.3"
   },
   "devDependencies": {
