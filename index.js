@@ -4,11 +4,8 @@
 /**
  * @fileoverview
  * A plugin which replaces any optional dependencies in a module's package.json.
- *
- * @external webpack
  */
-const path = require('path');
-const fs = require('fs');
+
 const webpack = require('webpack');
 const noop = require('noop-webpack-plugin');
 

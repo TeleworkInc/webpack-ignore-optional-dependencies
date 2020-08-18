@@ -1,4 +1,4 @@
-# Ignore optional dependencies
+# Disable packages
 Disable a package throughout your build process by pointing it to an empty
 module. This was designed for use with the `fsevents` package, which breaks
 builds for Webpack and Rollup alike.
@@ -15,7 +15,7 @@ const disablePackages = require('webpack-disable-package');
 {
   ...
   plugins: [
-    disablePackages('fsevents'),
+    disablePackages('fsevents', 'my-broken-dependency', ...),
     ...
   ],
 }
